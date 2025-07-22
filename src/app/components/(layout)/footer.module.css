@@ -1,0 +1,38 @@
+.separator {
+    --separator-offset: calc(1px / 2);
+
+    display: block;
+    height: 1px;
+    width: 100%;
+
+    background-color: var(--foreground);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    width: 100%;
+
+    font-size: 18px;
+    line-height: 2lh;
+}
+
+.footer a {
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+
+.footer ul li {
+    display: inline-block;
+    margin: 0 20px;
+    white-space: nowrap;
+    list-style-type: none;
+}
+
+.footer img {
+    flex-shrink: 0;
+    object-fit: cover;
+}

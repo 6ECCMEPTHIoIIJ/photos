@@ -1,0 +1,37 @@
+.masonry {
+    --grid-columns-wide: 4;
+    --grid-columns-mediun: 3;
+    --grid-columns-narrow: 2;
+    --grid-columns-mobile: 1;
+
+    width: 100%;
+
+    gap: 16px;
+    column-count: var(--grid-columns-wide);
+}
+
+@media (max-width: 1600px)  {
+    .masonry {
+        column-count: var(--grid-columns-mediun);
+    }
+}
+
+@media (max-width: 1200px)   {
+    .masonry {
+        column-count: var(--grid-columns-narrow);
+    }
+}
+
+@media (max-width: 800px) {
+    .masonry {
+        column-count: var(--grid-columns-mobile);
+    }
+}
+
+.photo {
+    position: relative;
+    width: 100%;
+
+    break-inside: avoid;
+    margin-bottom: 16px;
+}

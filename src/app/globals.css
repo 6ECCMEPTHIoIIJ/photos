@@ -1,13 +1,39 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --backgoround-active: #e2e2e2;
+  --foreground-active: #383838;
+
+  --background-color: var(--background);
+  --color: var(--foreground);
+  --shadow-color: var(--foreground-active);
+
+  --button-primary-background-color: var(--foreground);
+  --button-secondary-background-color: var(--background);
+
+  --button-primary-background-color-active: var(--foreground-active);
+  --button-secondary-background-color-active: var(--backgoround-active);
+
+  --button-primary-color: var(--background);
+  --button-secondary-color: var(--foreground);
+
+  --button-primary-border: none;
+  --button-secondary-border: 1px solid var(--button-secondary-color);
+
+  --theme-switch-transition: color, background-color, border;
+  --theme-switch-duration: 0.5s;
+  --theme-switch-timing-function: ease;
+
+  --wide: 1920px;
+  --medium: 1280px;
+  --narrow: 640px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+  --background: #171717;
+  --foreground: #ffffff;
+  --backgoround-active: #383838;
+  --foreground-active: #e2e2e2;
 }
 
 html,
@@ -22,6 +48,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  -webkit-transition-property: var(--theme-switch-transition);
+  transition-property: var(--theme-switch-transition);
+  -webkit-transition-duration: var(--theme-switch-duration);
+  transition-duration: var(--theme-switch-duration);
+  -webkit-transition-timing-function: var(--theme-switch-timing-function);
+  transition-timing-function: var(--theme-switch-timing-function);
 }
 
 * {
@@ -33,10 +66,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }

@@ -1,0 +1,22 @@
+.toggle {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+    color: var(--button-secondary-color);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.toggle svg {
+    width: 50px;
+    height: 50px;
+}

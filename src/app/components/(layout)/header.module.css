@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-height: 170px;
+    min-height: 100px;
+    padding: 20px 100px;
+
+    width: 100%;
+
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1lh;
+    text-transform: uppercase;
+}
